@@ -25,7 +25,7 @@ public class MyServer {
             serverBootstrap.group(boss, worker).channel(NioServerSocketChannel.class)
                     .handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new MyServerInitializer());
-            ChannelFuture channelFuture = serverBootstrap.bind(8888).sync();
+            ChannelFuture channelFuture = serverBootstrap.bind(9999).sync();
             channelFuture.channel().closeFuture().sync();
         }catch (Exception e){
             e.printStackTrace();
