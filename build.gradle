@@ -13,7 +13,11 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     // https://mvnrepository.com/artifact/io.netty/netty-all
-    compile group: 'io.netty', name: 'netty-all', version: '4.1.30.Final'
+    compile (
+            "io.netty:netty-all:4.1.30.Final",
+            "com.google.protobuf:protobuf-java:3.6.1",
+            "com.google.protobuf:protobuf-java-util:3.6.1"
+    )
     fileTree(dir: 'lib', include: '*.jar')
 }
 //指定编译的编码
